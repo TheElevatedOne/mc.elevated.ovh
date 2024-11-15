@@ -2,9 +2,77 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/default.css">
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="./js/navigation.js"></script>
+        <script src="./js/MinecraftColorCodes.3.7.js"></script>
+        <script src="./js/getServer.js"></script>
         <title>ELEVATED | Minecraft</title>
     </head>
     <body>
-        <div class="background" id="background"></div>
+        <div class="main" id="main">
+            <div class="background" id="background">
+                <div class="title"></div>
+                <div class="buttons">
+                    <div onclick="serverInfo()"><span>Server Info</span></div>
+                    <div onclick="dynMap()"><span>Dynamic Map</span></div>
+                    <div><span>Mods</span></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div class="server" id="server">
+            <div class="background" id="background">
+                <div class="title-bar">
+                    <span>Server Info</span>
+                </div>
+                <div class="left-right">
+                    <div class="left">
+                        <img class="image" id="server-image" src="./images/unknown_server.png" alt="Server">
+                        <div class="title">
+                            <span class="server-title" id="server-title">none</span>
+                            <br>
+                            <span class="server-desc" id="server-desc"></span>
+                        </div>
+                        <div class="footer">
+                            <span id="players"></span>
+                            <br>
+                            <span id="version"></span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="right" id="right">
+                        <div class="title">Player List (Sample):</div>
+                        <ul class="player-list" id="player-list"></ul>
+                    </div>
+                </div>
+                <div class="footer-bar">
+                    <div class="button" onclick="serverInfo()">
+                        <span>Back</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dynmap" id="dynmap">
+            <div class="background" id="background">
+                <div class="title-bar">
+                    <span>Dynamic Map</span>
+                </div>
+                <div class="frame">
+                    <iframe id="iframe" src="https://vape.elevated.ovh" frameborder="0"></iframe>
+                    <div class="fullscreen"></div>
+                </div>
+                <div class="footer-bar">
+                    <script>
+                        function iframeReload() {
+                            document.getElementById("iframe").src += "";
+                        }
+                    </script>
+                    <div class="reload" onclick="iframeReload()"><span>Reload</span></div>
+                    <div class="fullscreen"><span>Fullscreen</span></div>
+                    <div class="back" onclick="dynMap()"><span>Back</span></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
