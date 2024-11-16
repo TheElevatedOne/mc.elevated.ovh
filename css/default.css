@@ -7,6 +7,121 @@ body {
     overflow: hidden;
 }
 
+.lang {
+    display: block;
+    position: absolute;
+    width: 8vh;
+    left: calc(100% - 9vh);
+    top: 1vh;
+    height: calc(8vh * 0.73);
+    background: url("../images/hotbar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8vh;
+    cursor: pointer;
+    & > div.flag {
+        display: block;
+        position: absolute;
+        width: 8vh;
+        height: calc(8vh * 0.73);
+        background: url("../flags/flag_eng.png");
+        background-repeat: no-repeat;
+        background-size: calc(6vh * 0.73);
+        background-position: center;
+    }
+    & > input.lang-c {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+    & > div.lang-dropdown {
+        display: grid;
+        position: absolute;
+        top: calc(8vh * 0.73);
+        left: calc(100% - 8vh);
+        width: 8vh;
+        height: 0vh;
+        cursor: default;
+        transition: 0.5s;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        & > div {
+            cursor: pointer;
+        }
+        & > div.eng {
+            background: url("../images/hotbar.png");
+            background-repeat: no-repeat;
+            background-size: 8vh;
+            background-position: center;
+            & > div {
+                background: url("../flags/flag_eng.png");
+                background-repeat: no-repeat;
+                background-size: calc(6vh * 0.73);
+                background-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        & > div.sk {
+            background: url("../images/hotbar.png");
+            background-repeat: no-repeat;
+            background-size: 8vh;
+            background-position: center;
+            & > div {
+                background: url("../flags/flag_sk.png");
+                background-repeat: no-repeat;
+                background-size: calc(6vh * 0.73);
+                background-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        & > div.cz {
+            background: url("../images/hotbar.png");
+            background-repeat: no-repeat;
+            background-size: 8vh;
+            background-position: center;
+            & > div {
+                background: url("../flags/flag_cz.png");
+                background-repeat: no-repeat;
+                background-size: calc(6vh * 0.73);
+                background-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        & > div.ussr {
+            background: url("../images/hotbar.png");
+            background-repeat: no-repeat;
+            background-size: 8vh;
+            background-position: center;
+            & > div {
+                background: url("../flags/flag_ussr.png");
+                background-repeat: no-repeat;
+                background-size: calc(6vh * 0.73);
+                background-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+.lang:hover {
+    background: url("../images/hotbar_selection.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8vh;
+}
+
+.lang-c:checked {
+    & + .lang-dropdown {
+        height: calc(8vh * 0.73 * 4);
+    }
+}
+
 .main {
     display: block;
     position: absolute;

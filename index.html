@@ -2,21 +2,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/default.css">
+        <link rel="stylesheet" href="./css/dd.css">
+        <meta name="darkreader-lock">
         <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="./js/navigation.js"></script>
         <script src="./js/MinecraftColorCodes.3.7.js"></script>
         <script src="./js/getServer.js"></script>
+        <script src="./js/language.js"></script>
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mc.elevated.ovh">
+        <meta property="og:title" content="ELEVATED | Minecraft">
+        <meta property="og:description" content="Website for showing information about my private Minecraft Server.">
+        <meta property="og:image" content="https://www.elevated.ovh/logo/poster.png">
         <title>ELEVATED | Minecraft</title>
     </head>
-    <body>
+    <body onload="chLang()">
         <div class="main" id="main">
             <div class="background" id="background">
                 <div class="title"></div>
                 <div class="buttons">
-                    <div onclick="serverInfo()"><span>Server Info</span></div>
-                    <div onclick="dynMap()"><span>Dynamic Map</span></div>
-                    <div><span>Mods</span></div>
+                    <div onclick="serverInfo()"><span id="button_01">Server Info</span></div>
+                    <div onclick="dynMap()"><span id="button_02">Dynamic Map</span></div>
+                    <div><span id="button_03">Mods</span></div>
                 </div>
                 <div></div>
             </div>
@@ -24,7 +32,7 @@
         <div class="server" id="server">
             <div class="background" id="background">
                 <div class="title-bar">
-                    <span>Server Info</span>
+                    <span id="button_01">Server Info</span>
                 </div>
                 <div class="left-right">
                     <div class="left">
@@ -42,13 +50,13 @@
                     </div>
                     <div class="divider"></div>
                     <div class="right" id="right">
-                        <div class="title">Player List (Sample):</div>
+                        <div class="title" id="sub_03">Player List (Sample):</div>
                         <ul class="player-list" id="player-list"></ul>
                     </div>
                 </div>
                 <div class="footer-bar">
                     <div class="button" onclick="serverInfo()">
-                        <span>Back</span>
+                        <span id="sub_06">Back</span>
                     </div>
                 </div>
             </div>
@@ -56,7 +64,7 @@
         <div class="dynmap" id="dynmap">
             <div class="background" id="background">
                 <div class="title-bar">
-                    <span>Dynamic Map</span>
+                    <span id="button_02">Dynamic Map</span>
                 </div>
                 <div class="frame">
                     <iframe id="iframe" src="https://dock.elevated.ovh" frameborder="0"></iframe>
@@ -68,10 +76,20 @@
                             document.getElementById("iframe").src += "";
                         }
                     </script>
-                    <div class="reload" onclick="iframeReload()"><span>Reload</span></div>
-                    <div class="fullscreen"><span>Fullscreen</span></div>
-                    <div class="back" onclick="dynMap()"><span>Back</span></div>
+                    <div id="sub_04" class="reload" onclick="iframeReload()"><span>Reload</span></div>
+                    <div id="sub_05" class="fullscreen"><span>Fullscreen</span></div>
+                    <div id="sub_06" class="back" onclick="dynMap()"><span>Back</span></div>
                 </div>
+            </div>
+        </div>
+        <div class="lang">
+            <div class="flag" id="flag"></div>
+            <input type="checkbox" class="lang-c" id="lang">
+            <div class="lang-dropdown" id="lang-dropdown">
+                <div class="eng" id="eng" title="English" onclick="chLang(this)"><div id="flag_eng"></div></div>
+                <div class="sk" id="sk" title="Slovak" onclick="chLang(this)"><div id="flag_sk"></div></div>
+                <div class="cz" id="cz" title="Czech" onclick="chLang(this)"><div id="flag_cz"></div></div>
+                <div class="ussr" id="ussr" title="A Joke" onclick="chLang(this)"><div id="flag_ussr"></div></div>
             </div>
         </div>
     </body>
