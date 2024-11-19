@@ -1,5 +1,6 @@
 var api = "https://api.minetools.eu/ping/"
 var url = 'donutsmp.net'
+
 $.getJSON(api + url, 
     function(data){
         if (data.error) {
@@ -9,8 +10,8 @@ $.getJSON(api + url,
         document.getElementById("server-image").src = data.favicon;
         document.getElementById("server-desc").appendChild(data.description.replaceColorCodes());
         document.getElementById("server-title").innerHTML = url;
-        document.getElementById("players").innerHTML = `Players: ${data.players.online}/${data.players.max}`;
-        document.getElementById("version").innerHTML = `Version: ${data.version.name}`;
+        document.getElementById("players").innerHTML = ` ${data.players.online}/${data.players.max}`;
+        document.getElementById("version").innerHTML = ` ${data.version.name}`;
         var sample = data.players.sample;
         if (sample.length != 0) {
             document.getElementById("right").style.overflowY = "scroll";

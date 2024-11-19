@@ -8,8 +8,8 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="./js/navigation.js"></script>
         <script src="./js/MinecraftColorCodes.3.7.js"></script>
-        <script src="./js/getServer.js"></script>
         <script src="./js/language.js"></script>
+        <script src="./js/getServer.js"></script>
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://mc.elevated.ovh">
         <meta property="og:title" content="ELEVATED | Minecraft">
@@ -32,7 +32,7 @@
         <div class="server" id="server">
             <div class="background" id="background">
                 <div class="title-bar">
-                    <span id="button_01">Server Info</span>
+                    <span id="title_01">Server Info</span>
                 </div>
                 <div class="left-right">
                     <div class="left">
@@ -43,9 +43,9 @@
                             <span class="server-desc" id="server-desc"></span>
                         </div>
                         <div class="footer">
-                            <span id="players"></span>
+                            <span id="sub_01"></span><span id="players"></span>
                             <br>
-                            <span id="version"></span>
+                            <span id="sub_02"></span></spa><span id="version"></span>
                         </div>
                     </div>
                     <div class="divider"></div>
@@ -64,7 +64,7 @@
         <div class="dynmap" id="dynmap">
             <div class="background" id="background">
                 <div class="title-bar">
-                    <span id="button_02">Dynamic Map</span>
+                    <span id="title_02">Dynamic Map</span>
                 </div>
                 <div class="frame">
                     <iframe id="iframe" src="https://dock.elevated.ovh" frameborder="0"></iframe>
@@ -78,7 +78,7 @@
                     </script>
                     <div id="sub_04" class="reload" onclick="iframeReload()"><span>Reload</span></div>
                     <div id="sub_05" class="fullscreen"><span>Fullscreen</span></div>
-                    <div id="sub_06" class="back" onclick="dynMap()"><span>Back</span></div>
+                    <div id="sub_07" class="back" onclick="dynMap()"><span>Back</span></div>
                 </div>
             </div>
         </div>
