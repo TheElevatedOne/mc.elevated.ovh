@@ -3,11 +3,6 @@
     src: url("../font/MinecraftRegular.otf");
 }
 
-@font-face {
-    font-family: "MinecraftRus";
-    src: url("../font/MinecraftRus.ttf");
-}
-
 body {
     overflow: hidden;
 }
