@@ -19,6 +19,7 @@ body {
     background-position: center;
     background-size: 8vh;
     cursor: pointer;
+    z-index: 1;
     & > div.flag {
         display: block;
         position: absolute;
