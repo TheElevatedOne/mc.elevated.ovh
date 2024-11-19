@@ -18,11 +18,13 @@
         <meta property="og:image" content="https://www.elevated.ovh/logo/poster.png">
         <title>ELEVATED | Minecraft</title>
     </head>
-    <body onload="chLang()">
+    <body onload="chLang(); rPano()">
         <div class="main" id="main">
             <a-scene style="z-index: -1;">
-                <div class="darken"></div>
-                <a-sky id="panorama" src="./panoramas/03.jpg">
+                <a-assets>
+                    <img id="skybox" src="./panoramas/03.jpg">
+                </a-assets>
+                <a-sky id="panorama" src="#skybox">
                     <a-animation attribute="rotation" fill="forwards" easing="linear" dur="120000" from="0 0 0" to="0 360 0" repeat="indefinite"></a-animation>
                 </a-sky>
             </a-scene>
