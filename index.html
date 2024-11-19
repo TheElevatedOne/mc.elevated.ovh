@@ -10,6 +10,7 @@
         <script src="./js/MinecraftColorCodes.3.7.js"></script>
         <script src="./js/language.js"></script>
         <script src="./js/getServer.js"></script>
+        <script src="./js/panorama.js"></script>
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://mc.elevated.ovh">
         <meta property="og:title" content="ELEVATED | Minecraft">
@@ -19,6 +20,12 @@
     </head>
     <body onload="chLang()">
         <div class="main" id="main">
+            <a-scene style="z-index: -1;">
+                <div class="darken"></div>
+                <a-sky id="panorama" src="./panoramas/03.jpg">
+                    <a-animation attribute="rotation" fill="forwards" easing="linear" dur="120000" from="0 0 0" to="0 360 0" repeat="indefinite"></a-animation>
+                </a-sky>
+            </a-scene>
             <div class="background" id="background">
                 <div class="title"></div>
                 <div class="buttons">
@@ -26,7 +33,7 @@
                     <div onclick="dynMap()"><span id="button_02">Dynamic Map</span></div>
                     <div><span id="button_03">Mods</span></div>
                 </div>
-                <div></div>
+                <div></div>   
             </div>
         </div>
         <div class="server" id="server">
