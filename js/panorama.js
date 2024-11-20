@@ -1,7 +1,7 @@
 const panoramas = [
-    "panoramas/01.jpg",
-    "panoramas/02.jpg",
-    "panoramas/03.jpg"
+    "panoramas/01.png",
+    "panoramas/02.png",
+    "panoramas/03.png"
 ];
 
 function rPano() {
