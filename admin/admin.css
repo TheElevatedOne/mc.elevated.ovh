@@ -60,7 +60,7 @@ main {
         }
     }
     & > div.info {
-        display: none;
+        display: block;
         position: absolute;
         width: 75vw;
         height: 100vh;
@@ -72,7 +72,7 @@ main {
     }
 
     & > div.container-fluid {
-        display: block;
+        display: none;
         width: 75vw;
         left: 12.5vw;
         background-color: rgba(0, 0, 0, 0.2);
