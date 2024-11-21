@@ -34,7 +34,7 @@
                 <div class="buttons">
                     <div onclick="serverInfo()"><span id="button_01">Server Info</span></div>
                     <div onclick="dynMap()"><span id="button_02">Dynamic Map</span></div>
-                    <div><span id="button_03">Mods</span></div>
+                    <div onclick="mods()"><span id="button_03">Mods</span></div>
                 </div>
                 <div></div>   
             </div>
@@ -89,6 +89,27 @@
                     <div id="sub_04" class="reload" onclick="iframeReload()"><span>Reload</span></div>
                     <div id="sub_05" class="fullscreen"><span>Fullscreen</span></div>
                     <div id="sub_07" class="back" onclick="dynMap()"><span>Back</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="mods" id="mods">
+            <div class="background" id="background">
+                <div class="title-bar">
+                    <span id="title_03">Mods</span>
+                </div>
+                <div class="mod-menu">
+                    <div class="left-scroll"></div>
+                    <div class="right-desc"></div>
+                </div>
+                <div class="footer-bar">
+                    <script>
+                        function dunno() {
+                            window.alert(`Didn't want to remake the design yet, so this button is here. It does... NOTHING!! I will redesign it someday, but not now.`)
+                        }
+                    </script>
+                    <div class="load" onclick="loadMods()" title="It can be quite a lot of data."><span>Load Mods</span></div>
+                    <div class="dunno" onclick="dunno()"><span>?</span></div>
+                    <div class="back" onclick="mods()"><span>Back</span></div>
                 </div>
             </div>
         </div>

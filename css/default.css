@@ -426,3 +426,76 @@ body {
         }
     }
 }
+
+.mods {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    div.background {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        background: url("../images/dirt.png");
+        background-size: calc(100vw / 16);
+        background-repeat: repeat;
+    }
+    div.title-bar {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        text-align: center;
+        align-content: center;
+        & > span {
+            font-family: "Minecraft";
+            color: white;
+            font-size: 3vh;
+        }
+    }
+    div.mod-menu {
+        display: grid;
+        position: absolute;
+        width: 100vw;
+        height: 75vh;
+        top: 10vh;
+        grid-template-columns: min-content 1fr;
+        background-color: rgba(0, 0, 0, 0.5);
+        & > div.left-scroll {
+            height: 100%;
+            width: 20vw;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    div.footer-bar {
+        display: grid;
+        position: absolute;
+        width: 100vh;
+        height: 15vh;
+        top: 84vh;
+        left: calc(50vw - 50vh);
+        align-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: white;
+        font-family: "Minecraft";
+        text-align: center;
+        column-gap: 2vh;
+        font-size: 3vh;
+        & > div {
+            align-content: center;
+            background: url("../images/button-small.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 6vh;
+            width: 32vh;
+            cursor: pointer;
+        }
+        & > div:hover {
+            background: url("../images/button_highlighted-small.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+}

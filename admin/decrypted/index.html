@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="darkreader-lock">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mc.elevated.ovh/admin">
+        <meta property="og:title" content="ELEVATED | Admin">
+        <meta property="og:description" content="Admin tools for the server">
+        <meta property="og:image" content="https://www.elevated.ovh/logo/poster.png">
+        <link rel="stylesheet" href="admin.css">
+        <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+        <title>ELEVATED | Admin</title>
+        <link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+        <script type="text/javascript" src="./static/js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="./static/js/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="./static/js/jquery-ui-1.12.0.min.js"></script>
+        <?php
+        $rconHost = "localhost";
+        $rconPort = 25575;
+        $rconPassword = "Rv2gWCLTbnxmPZNA9Jauq6";
+        ?>
+        <script type="text/javascript" src="./static/js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="./static/js/script.js" ></script>
+        <script src="./admin.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="sidebar">
+              <div class="logo"></div>
+              <div class="buttons">
+                <div onclick="rcon()"><span>Minecraft RCON</span></div>
+                <div onclick="con()"><span>Server Console</span></div>
+              </div>
+            </div>
+            <div class="info" id="info">
+              <p>This is an Admin Website for our Minecraft server.</p>
+              <p><b>Minecraft RCON</b> - Minecraft console, where you can send commands onto the server itself.</p>
+              <p><b>Server Console</b> - Linux Server console, for changing settings of the actual server.</p>
+            </div>
+            <div class="container-fluid" id="content">
+                <div class="alert alert-info" id="alertMessage">
+                  Minecraft RCON
+                </div>
+                <div id="consoleRow">
+                  <div class="panel panel-default" id="consoleContent">
+                    <div class="panel-heading">
+                      <h3 class="panel-title pull-left"><span class="glyphicon glyphicon-console"></span> Console</h3>
+                      <div class="btn-group btn-group-xs pull-right">
+                        <a class="btn btn-default" href="http://minecraft.gamepedia.com/Commands" target="_blank"><span class="glyphicon glyphicon-question-sign"></span><span class="hidden-xs"> Commands</span></a>
+                        <a class="btn btn-default" href="http://www.minecraftinfo.com/idlist.htm" target="_blank"><span class="glyphicon glyphicon-info-sign"></span><span class="hidden-xs"> Items IDs</span></a>
+                      </div>
+                    </div>
+                    <div class="panel-body">
+                      <ul class="list-group" id="groupConsole"></ul>
+                    </div>
+                  </div>
+                  <div class="input-group" id="consoleCommand">
+                    <span class="input-group-addon">
+                      <input id="chkAutoScroll" type="checkbox" checked="true" autocomplete="off" /><span class="glyphicon glyphicon-arrow-down"></span>
+                    </span>
+                    <div id="txtCommandResults"></div>
+                    <input type="text" class="form-control" id="txtCommand" />
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-primary" id="btnSend"><span class="glyphicon glyphicon-send"></span><span class="hidden-xs"> Send</span></button>
+                      <button type="button" class="btn btn-warning" id="btnClearLog"><span class="glyphicon glyphicon-erase"></span><span class="hidden-xs"> Clear</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="console" id="console">
+                <iframe src="https://dock.elevated.ovh" frameborder="0"></iframe>
+              </div>
+        </main>
+    </body>
+</html>
