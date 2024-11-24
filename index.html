@@ -11,6 +11,7 @@
         <script src="./js/language.js"></script>
         <script src="./js/getServer.js"></script>
         <script src="./js/panorama.js"></script>
+        <script src="./mods/data.js"></script>
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://mc.elevated.ovh">
         <meta property="og:title" content="ELEVATED | Minecraft">
@@ -98,8 +99,30 @@
                     <span id="title_03">Mods</span>
                 </div>
                 <div class="mod-menu">
-                    <div class="left-scroll"></div>
-                    <div class="right-desc"></div>
+                    <div class="left-scroll" id="left-scroll">
+                        <div class="search" id="search"></div>
+                        <ul id="mod-list">
+                            <!-- <li>
+                                <div id="mod-icon"></div>
+                                <span id="mod-name">Adorn</span>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li> -->
+                        </ul>
+                    </div>
+                    <div class="right-desc" id="right-desc">
+                        <!-- <div class="inner" id="mod-id">
+                            <div class="mod-icon" id="mod-icon"></div>
+                            <span class="mod-title" id="mod-name">Test</span>
+                            <div class="mod-other" id="mod-other">
+                                <p id="mod-auth">Authors: </p>
+                                <p id="mod-desc">Description: </p>
+                                <p id="mod-ver">Version: </p>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
                 <div class="footer-bar">
                     <script>
@@ -108,7 +131,6 @@
                         }
                     </script>
                     <div class="load" onclick="loadMods()" title="It can be quite a lot of data."><span>Load Mods</span></div>
-                    <div class="dunno" onclick="dunno()"><span>?</span></div>
                     <div class="back" onclick="mods()"><span>Back</span></div>
                 </div>
             </div>

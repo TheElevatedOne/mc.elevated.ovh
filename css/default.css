@@ -467,17 +467,110 @@ body {
             height: 100%;
             width: 20vw;
             background-color: rgba(0, 0, 0, 0.2);
+            max-height: calc(75vh - 10px);
+            overflow-y: hidden;
+            box-sizing: border-box;
+            border: 10px 10px 10px;
+            & > div.search {
+                height: 8vh;
+                margin: 10px;
+                background-color: #50505080;
+                border: 0.8vh solid #70707080;
+            }
+            & > ul {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                overflow-y: scroll;
+                max-height: calc(65vh - 20px);
+                & > li {
+                    display: grid;
+                    height: 12vh;
+                    background-color: #30303080;
+                    border: 0.8vh solid #50505080;
+                    margin: 10px;
+                    cursor: pointer;
+                    grid-template-columns: min-content 1fr;
+                    align-content: center;
+                    column-gap: 15px;
+                    & > div.mod-icon {
+                        background: url("../favicon.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 100%;
+                        height: 5vw;
+                        width: 5vw;
+                        margin-left: 1vh;
+                    }
+                    & > div.mod-name {
+                        display: table;
+                        height: 10vh;
+                        width: calc(12vw - 1vh - 15px);
+                        max-width: calc(12vw - 1vh - 15px);
+                        & > span {
+                            display: table-cell;
+                            vertical-align: middle;
+                            color: white;
+                            font-family: "Minecraft";
+                            font-size: 2.5vh;
+                            font-weight: 600;
+                            white-space: pre-line;
+                            line-break: anywhere;
+                            max-width: calc(12vw - 1vh - 15px);
+                        }
+                    }
+                }
+                & > li:hover {
+                    background-color: #50505080;
+                    border: 0.8vh solid #70707080;
+                }
+            }
+        }
+        & > div.right-desc {
+            display: block;
+            width: 80vw;
+            height: 100%;
+            font-family: "Minecraft";
+            color: #fff;
+            & > div.inner {
+                display: none;
+                margin: 2vw;
+                grid-template-columns: min-content 1fr;
+                grid-template-rows: 1fr 2fr;
+                & > div.mod-icon {
+                    background: url("../favicon.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    width: 7vw;
+                    height: 7vw;
+                }
+                & > span.mod-title {
+                    font-size: 3vw;
+                    margin-left: 2vw;
+                    margin-top: 1.8vw;
+                }
+                & > div.mod-other {
+                    width: 100%;
+                    height: 100%;
+                    grid-column: span 2;
+                    word-wrap: break-word;
+                    line-break: anywhere;
+                    font-size: 1.5vw;
+                    padding-left: 1vw;
+                }
+            }
         }
     }
     div.footer-bar {
         display: grid;
         position: absolute;
-        width: 100vh;
+        width: 66vh;
         height: 15vh;
         top: 84vh;
-        left: calc(50vw - 50vh);
+        left: calc(50vw - 33vh);
         align-content: center;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         color: white;
         font-family: "Minecraft";
         text-align: center;
