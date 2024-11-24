@@ -20,7 +20,7 @@ function dynMap() {
     }
 }
 
-function mods() {
+function toMods() {
     var x = document.getElementById("main").style.display;
     if (x == "block") {
         document.getElementById("main").style.display = "none";
